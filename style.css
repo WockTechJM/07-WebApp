@@ -77,6 +77,8 @@ ul {
 }
 
 .about h2 {
+    margin-left: 0;
+    padding-top: 0.5rem;
     color: #2c3e50;
 }   
 
@@ -84,6 +86,14 @@ ul {
     font-size: 16px;
 }
 
+#profilePic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 1rem;
+   object-fit: cover;
+}
 .profile-image img {
     width: 150px;
     height: 150px;
