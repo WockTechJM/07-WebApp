@@ -23,4 +23,6 @@ Built with HTML, CSS, and JavaScript.
 - JavaScript
 
 ## Live Demo
-[View live site](https://wocktechjm.github.io/expense-tracker/)
+[View live site]
+
+https://wocktechjm.github.io/07-WebApp/Expense-Tracker/
