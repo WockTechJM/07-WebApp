@@ -14,22 +14,30 @@ function saveToStorage() {
 
 // Render all expenses
 function renderExpenses() {
-  expenseList.innerHTML = ""; // clear current list
+  expenseList.innerHTML = "";
   let total = 0;
+
+  let categoryTotals = { Food: 0, Bills: 0, Fun: 0 };
 
   expenses.forEach((expense, index) => {
     total += expense.amount;
+    categoryTotals[expense.category] += expense.amount;
 
     const li = document.createElement("li");
     li.innerHTML = `
       ${expense.name} - $${expense.amount} (${expense.category})
       <button onclick="deleteExpense(${index})">X</button>
     `;
-
     expenseList.appendChild(li);
   });
 
-  totalDisplay.textContent = total;
+  // Update category totals div
+  const totalsDiv = document.getElementById("category-totals");
+  totalsDiv.innerHTML = `
+    <p>Food: $${categoryTotals.Food}</p>
+    <p>Bills: $${categoryTotals.Bills}</p>
+    <p>Fun: $${categoryTotals.Fun}</p>
+  `;
 }
 
 // Delete an expense
